@@ -4,10 +4,10 @@
         <thead>
             <tr>
                 <th>No</th>
-                <th>Name Book</th>
-                <th>Date start</th>
-                <th>Date end</th>
-                <th>returned</th>
+                <th>Nama Buku</th>
+                <th>Tanggal Di Pinjam</th>
+                <th>Dikembalikan</th>
+                <th>Status</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -31,7 +31,7 @@
                     </td>
                     <td>
                         <button type="button" wire:click="acc('{{ Crypt::encrypt($item->borrow->id) }} }}')"
-                            class="btn btn-secondary">returned</button>
+                            class="btn btn-secondary">Klik Jika Sudah Di Kembalikan</button>
                         <button type="button"
                             onclick="confirm('Are you sure you want to delete this Author ? delete category same you delete book in auhtor this') || event.stopImmediatePropagation()"
                             wire:click="destroy('{{ Crypt::encrypt($item->borrow->id) }} }}')"

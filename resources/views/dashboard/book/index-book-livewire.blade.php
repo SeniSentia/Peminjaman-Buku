@@ -4,11 +4,11 @@
         <thead>
             <tr>
                 <th>No</th>
-                <th>Title Book</th>
-                <th>Date Published</th>
-                <th>Description</th>
-                <th>Category</th>
-                <th>Action</th>
+                <th>Judul Buku</th>
+                <th>Tanggal Publikasi</th>
+                <th>Deskripsi</th>
+                <th>Kategori</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>

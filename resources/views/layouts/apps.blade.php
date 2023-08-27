@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Peminjaman Buku</title>
+    <title>Sistem Perpustakaan Tasikmalaya</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -34,20 +34,20 @@
 </head>
 
 <body>
-    <header id="header" class="fixed-top">
+    <header id="header" class="fixed-top" style="background: #3F2305;color:white">
         <div class="container d-flex align-items-center justify-content-between">
-            <h1 class="logo"><a href="index.html">Pinjam Buku</a></h1>
-            <nav id="navbar" class="navbar">
+            <h1 class="logo" ><a href="/" style="color:white">SIPERTAS</a></h1>
+            <nav id="navbar" class="navbar bg-dark">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
-                    <li><a class="nav-link scrollto active" href="/borrow">Detail</a></li>
+                    <li><a class="nav-link scrollto active" style="color:white"href="/">Home</a></li>
+                    <li><a class="nav-link scrollto active" style="color:white" href="/borrow">Arsip Peminjaman</a></li>
                     @auth
                         @role('admin')
-                            <li><a class="getstarted scrollto" href="/dashboard">dashboard</a></li>
+                            <li><a class="getstarted scrollto" style="color:white" href="/dashboard">Dashboard</a></li>
                         @else
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
-                                <li><button type="submit" class="getstarted scrollto">logout</button></li>
+                                <li><button type="submit" style="color:white" class="getstarted scrollto">logout</button></li>
                             </form>
                         @endrole
                         

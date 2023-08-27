@@ -4,7 +4,8 @@
             <div class="card border my-2 p-3">
                 <div class="row">
                     <div class="col">
-                        <img src="{{ $item->book->thumbnail }}" class="img-responsivethumbnail" alt="...">
+                    <img src="{{ asset($item->book->thumbnail) }}" style="max-width:60%" class="img-responsive thumbnail" alt="...">
+
                     </div>
                     <div class="col">
                         <div>
@@ -17,8 +18,8 @@
                             </div>
                         </div>
                         <div class="date">
-                            <p class="fw-bold">start_date {{ $item->start_borrow }} until
-                                {{ $item->finish_borrow }}</p>
+                            <p><strong>- Tanggal dipinjam : {{ $item->start_borrow }}  </strong><p>- <strong>Tanggal dikembalikan:</strong>
+                               {{ $item->finish_borrow }}</p>
                         </div>
                         <div class="delete">
                             <button type="button"

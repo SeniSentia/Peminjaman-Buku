@@ -12,11 +12,11 @@
         @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Name Book</label>
-            <input type="text" class="form-control" name="name_book" value="{{ old('name_book') }}">
+            <input type="text" class="form-control form-control-lg" style="background:#F0EFEF" name="name_book" value="{{ old('name_book') }}">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Published Book</label>
-            <input type="date" class="form-control" name="published_book" value="{{ old('published_book') }}">
+            <input type="date" class="form-control form-control-lg" style="background:#F0EFEF" name="published_book" value="{{ old('published_book') }}">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Desc Book</label>
@@ -28,7 +28,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Publisher</label>
-            <select class="form-select" aria-label="Default select example" name="publisher_book">
+            <select class="form-select" style="background:#F0EFEF"" aria-label="Default select example" name="publisher_book">
                 @foreach ($publisher as $item)
                     <option value="{{ $item->id }}">{{ $item->name_publisher }}</option>
                 @endforeach
@@ -37,7 +37,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">author</label>
-            <select class="form-select" aria-label="Default select example" name="author_book">
+            <select class="form-select" style="background:#F0EFEF"" aria-label="Default select example" name="author_book">
                 @foreach ($author as $item)
                     <option value="{{ $item->id }}">{{ $item->name_author }}</option>
                 @endforeach
@@ -46,7 +46,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Category Book</label>
-            <select class="form-select" aria-label="Default select example" name="category_book">
+            <select class="form-select" style="background:#F0EFEF"" aria-label="Default select example" name="category_book">
                 @foreach ($category as $item)
                     <option value="{{ $item->id }}">{{ $item->name_category }}</option>
                 @endforeach
@@ -55,11 +55,11 @@
         </div>
         <div class="input-group mb-3">
             <label class="input-group-text" for="inputGroupFile01">Upload Thumbnail</label>
-            <input type="file" class="form-control" name="thumbnail_book" id="inputGroupFile01">
+            <input type="file" class="form-control form-control-lg" style="background:#F0EFEF" name="thumbnail_book" id="inputGroupFile01">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Type Book</label>
-            <select class="form-select" aria-label="Default select example" name="type_book">
+            <select class="form-select" style="background:#F0EFEF" aria-label="Default select example" name="type_book">
                 <option value="soft">soft</option>
                 <option value="hard">hard</option>
             </select>

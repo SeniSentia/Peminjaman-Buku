@@ -14,8 +14,7 @@
                 </div>
                 <div class="date row p-2">
                     <div class="col">
-                        <label for="exampleFormControlInput1" class="form-label"> Start
-                            date</label>
+                        <label for="exampleFormControlInput1" class="form-label"> Tanggal dipinjam</label>
                         <input type="date" class="form-control" wire:model="start_date">
                         @error('start_date')
                             <div class="alert alert-warning" role="alert">
@@ -24,8 +23,7 @@
                         @enderror
                     </div>
                     <div class="col">
-                        <label for="exampleFormControlInput1" class="form-label">end
-                            date</label>
+                        <label for="exampleFormControlInput1" class="form-label">Pilih tanggal pengembalian</label>
                         <input type="date" class="form-control" wire:model="end_date">
                         @error('end_date')
                             <div class="alert alert-warning" role="alert">
@@ -36,7 +34,7 @@
                 </div>
                 <div class="pick">
                     <button type="button" wire:click="borrow('{{ Crypt::encrypt($detail->id) }}')"
-                        class="btn btn-outline-secondary">Save</button>
+                        class="btn btn-outline-secondary">PINJAM SEKARANG</button>
                 </div>
             </div>
 

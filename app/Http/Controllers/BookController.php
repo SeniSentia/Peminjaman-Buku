@@ -51,17 +51,18 @@ class BookController extends Controller
             'type_book' => 'required',
         ]);
         $name_thumbnail = $request->file('thumbnail_book')->store('thumbnail');
-        Book::Create([
+        Book::create([
             'name' => $request->name_book,
             'published_at' => $request->published_book,
             'desc_book' => $request->desc_book,
             'id_publisher' => $request->publisher_book,
             'id_author' => $request->author_book,
             'id_category' => $request->category_book,
-            'thumbnail' => $name_thumbnail,
+            'thumbnail' => '/storage/' . $name_thumbnail, // Corrected line
             'type_book' => $request->type_book,
             'active' => '1'
         ]);
+        
 
         return redirect('/dashboard/book');
     }
