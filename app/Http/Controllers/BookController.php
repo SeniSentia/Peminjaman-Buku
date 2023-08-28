@@ -20,10 +20,38 @@ class BookController extends Controller
     }
     public function indexpage()
     {
+        $categories = Category::all();
         return view('welcome', [
+            'categories' => $categories,
             'books' => Book::where('active', '1')->get()
         ]);
     }
+    public function category(Request $request, $category_id = null)
+{
+    $categories = Category::all();
+
+    $booksQuery = Book::query()->where('active', '1');
+
+    if ($category_id) {
+        $selectedCategory = Category::findOrFail($category_id);
+        $booksQuery->where('id_category', $category_id);
+    } else {
+        $selectedCategory = null;
+    }
+
+    $books = $booksQuery->with('category')->get();
+
+    return view('category', [
+        'categories' => $categories,
+        'books' => $books,
+        'selectedCategory' => $selectedCategory
+    ]);
+}
+
+    
+    
+    
+    
 
     public function create()
     {

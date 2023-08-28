@@ -20,6 +20,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', [BookController::class, 'indexpage'])->name('indexbook');
+Route::get('/kategori/{id_kategori}', [BookController::class, 'category'])->name('category');
 Route::get('/detail/{idbook}', [BookController::class, 'detailpage'])->name('detailbook');
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/borrow', [BookController::class, 'detailborrow'])->name('detailborrow');

@@ -7,14 +7,16 @@
             </div>
             <div class="col">
                 <p class="h1">{{ $detail->name }}</p>
-                <figcaption class="figure-caption"><a href="">{{ $detail->author->name_author }}</a>
-                    {{ $detail->published_at }} By {{ $detail->publisher->name_publisher }}</figcaption>
+                <figcaption class="figure-caption">
+                    <a href="">{{ $detail->author->name_author }}</a> <br />
+                    {{ $detail->published_at }} By {{ $detail->publisher->name_publisher }}
+                </figcaption>
                 <div>
                     {!! $detail->desc_book !!}
                 </div>
                 <div class="date row p-2">
                     <div class="col">
-                        <label for="exampleFormControlInput1" class="form-label"> Tanggal dipinjam</label>
+                        <label for="exampleFormControlInput1" class="form-label">Pilih Tanggal dipinjam</label>
                         <input type="date" class="form-control" wire:model="start_date">
                         @error('start_date')
                             <div class="alert alert-warning" role="alert">
@@ -33,11 +35,11 @@
                     </div>
                 </div>
                 <div class="pick">
-                    <button type="button" wire:click="borrow('{{ Crypt::encrypt($detail->id) }}')"
-                        class="btn btn-outline-secondary">PINJAM SEKARANG</button>
+                    <button type="button" wire:click="borrow('{{ Crypt::encrypt($detail->id) }}')" class="btn btn-outline-secondary">
+                        PINJAM SEKARANG
+                    </button>
                 </div>
             </div>
-
         </div>
         <hr>
         <div class="author">
@@ -64,13 +66,12 @@
             </div>
         </div>
     </div>
-
-
-    @push('modals')
-        <script>
-            window.addEventListener('success', event => {
-                alert('action borrow is : ' + event.detail.newName);
-            })
-        </script>
-    @endpush
 </div>
+
+@push('modals')
+<script>
+    window.addEventListener('success', event => {
+        alert('Sukses Meminjam Buku: ' + event.detail.newName);
+    });
+</script>
+@endpush

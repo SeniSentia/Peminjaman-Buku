@@ -27,6 +27,10 @@
     <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    
+    <!-- ... -->
+ 
+</head>
 
     <!-- Template Main CSS File -->
     <link href="/assets/css/style.css" rel="stylesheet">
@@ -36,8 +40,14 @@
 <body>
     <header id="header" class="fixed-top" style="background: #3F2305;color:white">
         <div class="container d-flex align-items-center justify-content-between">
-            <h1 class="logo" ><a href="/" style="color:white">SIPERTAS</a></h1>
-            <nav id="navbar" class="navbar bg-dark">
+        <h3 style="display: flex; align-items: center; gap: 10px;">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.2483 3.75166C18.09 1.5 15.1033 0.286662 12 0.333329C8.89666 0.286662 5.92166 1.5 3.76333 3.75166C1.5 5.91 0.286662 8.89666 0.333329 12C0.286662 15.1033 1.5 18.0783 3.75166 20.2367C5.91 22.5 8.89666 23.7133 12 23.6667C15.1033 23.7133 18.0783 22.5 20.2367 20.2483C22.5 18.09 23.7133 15.1033 23.6667 12C23.7133 8.89666 22.5 5.91 20.2483 3.75166ZM17.8333 12V19H13.75V13.1667H10.25V19H6.16666V12H3.83333L12 3.83333L20.75 12H17.8333Z" fill="#CCCCCC"/>
+    </svg>
+    <a href="/" style="color: white; text-decoration: none;">SIPERTAS</a>
+</h3>
+
+            <nav id="navbar" class="navbar" style="color:white">
                 <ul>
                     <li><a class="nav-link scrollto active" style="color:white"href="/">Home</a></li>
                     <li><a class="nav-link scrollto active" style="color:white" href="/borrow">Arsip Peminjaman</a></li>
