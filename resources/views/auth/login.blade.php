@@ -26,7 +26,7 @@
             <div class="mt-4">
                 
                 <x-jet-input id="password" placeholder="Password" class="block mt-1 w-full bg-gray-200 rounded-lg py-3 px-4" type="password" name="password" required autocomplete="current-password" />
-            </div>
+            </div> 
 
             <div class="mt-4">
             
