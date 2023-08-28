@@ -1,7 +1,7 @@
 # Peminjaman-Buku
 ## Clone WEB
 ```
-git clone https://github.com/linlaz/Peminjaman-Buku.git
+git clone https://github.com/SeniSentia/Peminjaman-Buku.git
 ```
 ```
 cd Peminjaman-Buku
